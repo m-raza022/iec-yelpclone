@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Display Results Page</title>
+  </head>
+
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        Here are your top 3 recommendations for {{term}} in {{ loction }} {% for
+        each_business on establishments %}
+        <li>
+          <h3>{{ each_business.name }}</h3>
+          <h3>{{ each_business.rating }}</h3>
+          <h3>{{ each_business.location.display_address }}</h3>
+          <h3>{{ each_business.display_phone }}</h3>
+        </li>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
